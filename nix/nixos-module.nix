@@ -110,11 +110,8 @@ let
     let
       cmd = [
         "${cfg.package}/bin/kmonad"
-        "--input"
-        ''device-file "${keyboard.device}"''
-      ] ++ cfg.extraArgs ++ [
         "${mkCfg keyboard}"
-      ];
+      ] ++ cfg.extraArgs;
 
       groups = [
         "input"
