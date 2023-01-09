@@ -79,8 +79,8 @@ let
         output (uinput-sink "kmonad-${keyboard.name}")
     '' +
     lib.optionalString (keyboard.defcfg.compose.key != null) ''
-      cmp-seq ${keyboard.defcfg.compose.key}
-      cmp-seq-delay ${toString keyboard.defcfg.compose.delay}
+        cmp-seq ${keyboard.defcfg.compose.key}
+        cmp-seq-delay ${toString keyboard.defcfg.compose.delay}
     '' + ''
         fallthrough ${lib.boolToString keyboard.defcfg.fallthrough}
         allow-cmd ${lib.boolToString keyboard.defcfg.allowCommands}
